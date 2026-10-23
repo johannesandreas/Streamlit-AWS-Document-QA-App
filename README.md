@@ -17,9 +17,11 @@ A RAG (Retrieval-Augmented Generation) app that lets you ask questions about you
 
 ## Setup & Run
 
+### Option 1: Local (virtualenv)
+
 **1. Clone the repo and navigate to the project folder:**
 ```bash
-cd streamlit-aws-app
+cd Streamlit-AWS-Document-QA-App
 ```
 
 **2. Create and activate a virtual environment:**
@@ -51,6 +53,27 @@ streamlit run app.py
 ```
 
 **6. Open your browser at:**
+```
+http://localhost:8501
+```
+
+---
+
+### Option 2: Docker
+
+**1. Create a `.env` file in the project root** (same as above).
+
+**2. Build the image:**
+```bash
+docker build -t doc-qa .
+```
+
+**3. Run the container:**
+```bash
+docker run -p 8501:8501 --env-file .env doc-qa
+```
+
+**4. Open your browser at:**
 ```
 http://localhost:8501
 ```
